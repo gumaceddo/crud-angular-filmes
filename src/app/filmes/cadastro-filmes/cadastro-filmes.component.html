@@ -1,9 +1,10 @@
 <mat-toolbar class="app-title">Cadastrar Filme</mat-toolbar>
 <div class="main-div">
   <mat-card class="center width50" >
+    <form [formGroup]="cadastro">
       <mat-card-content>
           <mat-form-field class="full-width">
-            <input matInput placeholder="Título">
+            <input matInput placeholder="Título" name="titulo" formControllName='titulo'>
           </mat-form-field>
           <mat-form-field class="full-width">
             <input matInput placeholder="Link Foto">
@@ -32,6 +33,7 @@
             </mat-select>
           </mat-form-field>
         </mat-card-content>
+      </form>
         <mat-card-actions>
           <button color="accent" mat-raised-button>Salvar</button>
           <button color="warn" mat-raised-button>Cancelar</button>
